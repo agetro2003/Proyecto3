@@ -41,8 +41,8 @@ export default class Button {
     
 
 
-addToBody(){
-    document.body.appendChild(this.element)
+addToBody(div){
+    div.appendChild(this.element)
 
 }
 hide(){
