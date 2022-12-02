@@ -37,6 +37,15 @@ export default class Button {
            }
         })
 
+        this.element.addEventListener('mouseover', (e)=>{
+            if (this.element.style.background != "transparent"){
+                 this.element.style.border = "0.2em solid black";
+            }
+           
+        })
+        this.element.addEventListener('mouseout', (e)=>{
+            this.element.style.border = "none";
+        })
         }
     
 
@@ -47,9 +56,11 @@ addToBody(div){
 }
 hide(){
     this.element.style.background = "transparent"
+    this.element.style.border = "none"
 }
 
 show(){
     this.element.style.background = this.color
+    this.element.style.border = "0.2em solid black";
 }
 }
